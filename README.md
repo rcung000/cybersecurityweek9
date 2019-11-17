@@ -27,10 +27,10 @@ Vulnerability #1: SQL Injection
 
 Vulnerability #2: Session Hijacking/Fixation
 ## Red
-Vulnerability #1:
+Vulnerability #1: 
 
 Vulnerability #2:
 ## Green
-Vulnerability #1:
+Vulnerability #1: Username Enumeration
 
-Vulnerability #2:
+Vulnerability #2: XSS
