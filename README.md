@@ -25,7 +25,7 @@ Determine which color has the vulnerability.
 ## Blue
 Vulnerability #1: SQL Injection
 
-Vulnerability #2:
+Vulnerability #2: Session Hijacking/Fixation
 ## Red
 Vulnerability #1:
 
