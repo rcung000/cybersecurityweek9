@@ -68,3 +68,5 @@ The attacker can inject using the feedback form.
 This runs once the admin checks the feedback page.
 
 ![GIF](https://github.com/rcung000/cybersecurityweek9/blob/master/XSS.gif)
+
+## Notes
