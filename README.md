@@ -1,5 +1,5 @@
 # cybersecurityweek9
-Time spent total: 4 Hours
+Time spent total: 5 Hours
 ## Challenge Goals:
 The following goals **must** be completed:
 1. **Username Enumeration:** A careless developer mistake has created a username enumeration vulnerability. Determine which color has the vulnerability. You can use the existing username "jmonroe99" as a test. Next, figure out what mistake the developer made.
