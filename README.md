@@ -1,5 +1,5 @@
 # cybersecurityweek9
-Time spent total:
+Time spent total: 4 Hours
 ## Challenge Goals:
 The following goals **must** be completed:
 1. **Username Enumeration:** A careless developer mistake has created a username enumeration vulnerability. Determine which color has the vulnerability. You can use the existing username "jmonroe99" as a test. Next, figure out what mistake the developer made.
@@ -24,13 +24,47 @@ Determine which color has the vulnerability.
 
 ## Blue
 Vulnerability #1: SQL Injection
+Inject the following instead of the id, this makes the database to wait 5 seconds while querying the data.
+`%27%20OR%20SLEEP(5)=0--%27`
+
+![GIF](https://github.com/rcung000/cybersecurityweek9/blob/master/SQLI%20Exploit.gif)
 
 Vulnerability #2: Session Hijacking/Fixation
+Using the tool given to us, we can grab the SessionID and paste it into a different browser which isn't logged in. Alternatively we can use burp or packet sniffer to get the SessionID.
+
+This allows anyone who is able to grab the SessionID to take over the account.
+
+![GIF](https://github.com/rcung000/cybersecurityweek9/blob/master/Session%20Hijack.gif)
+
 ## Red
 Vulnerability #1: IDOR
 
+By changing the id parameter in the URL, we can get access to two hidden employees, one who was fired and one who goes public at a later date.
+
+![GIF](https://github.com/rcung000/cybersecurityweek9/blob/master/IDOR.gif)
+
 Vulnerability #2: CSRF
+
+By sending a malicious html page, when they go to the link it'll submit a request to edit one of the employees and the admin will be none the wiser.
+
+![GIF](https://github.com/rcung000/cybersecurityweek9/blob/master/CSRF.gif)
+
 ## Green
 Vulnerability #1: Username Enumeration
 
+By logging in with a known good username, the error message is bolded. However when logging in with a bad username, the error message remains the same but not bolded. See the below images where the HTML code is inspected. The Existing Username has it named Failure and the non-existent username has it named Failed.
+
+Existing Username:
+![PNG](https://github.com/rcung000/cybersecurityweek9/blob/master/UsernameEnumerationFailure.png)
+
+Non-existent Username:
+![PNG](https://github.com/rcung000/cybersecurityweek9/blob/master/UsernameEnumerationFailed.png)
+
 Vulnerability #2: XSS
+
+The attacker can inject using the feedback form.
+`<script>alert('Richard found the XSS!');</script>`
+
+This runs once the admin checks the feedback page.
+
+![GIF](https://github.com/rcung000/cybersecurityweek9/blob/master/XSS.gif)
